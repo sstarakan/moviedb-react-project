@@ -1,0 +1,10 @@
+.PosterPreview img {
+    width: 270px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 5px;
+}
+
+.PosterPreview {
+    width: 270px;
+    height: 420px;
+}

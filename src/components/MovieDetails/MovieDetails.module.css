@@ -1,0 +1,63 @@
+.MovieDetails {
+    display: flex;
+    /*flex-direction: column;*/
+    height: 95vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.MovieDetails div:nth-child(1) {
+    width: 50%;
+}
+
+.MovieDetails div:nth-last-child(1) {
+    align-self: flex-end;
+}
+
+.MovieDetails h1 {
+    background: rgba(211, 211, 211, 0.44);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    color: #4b4949;
+}
+
+.MovieDetails h2 {
+    background: rgba(211, 211, 211, 0.44);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    color: #4b4949;
+}
+
+.MovieDetails p {
+    background: rgba(211, 211, 211, 0.44);
+    padding: 5px;
+    border-radius: 10px;
+    color: #4b4949;
+    width: 500px;
+    font-size: 30px;
+}
+
+.starsDiv {
+    margin: 8px;
+    padding: 3px;
+    background: rgba(211, 211, 211, 0.44);
+    width: 340px;
+    border-radius: 10px;
+}
+
+.starsDiv span {
+    color: #4b4949;
+    width: fit-content;
+    margin-left: 25px;
+}
+
+.companyLogo {
+    border-radius: 10px;
+    margin: 8px;
+    padding: 3px;
+    background: rgba(211, 211, 211, 0.44);
+    width: 170px;
+    height: fit-content;
+}

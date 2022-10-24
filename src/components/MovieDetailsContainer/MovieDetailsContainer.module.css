@@ -1,0 +1,13 @@
+.MovieDetails {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 20px;
+}

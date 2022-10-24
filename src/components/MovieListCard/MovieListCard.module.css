@@ -1,0 +1,20 @@
+.MovieListCard {
+    width: 270px;
+    box-shadow: 10px 10px 38px 0 rgba(0, 0, 0, 0.96);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MovieListCardGenreContainer {
+    display: flex;
+    width: 270px;
+    flex-wrap: wrap;
+}
+
+.MovieListCardDark {
+    box-shadow: 10px 10px 38px 0 rgba(255, 0, 0, 0.96);
+}
+

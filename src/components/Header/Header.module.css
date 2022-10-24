@@ -1,0 +1,45 @@
+.Header {
+    width: 100vw;
+    background: white;
+    color: darkgray;
+    box-shadow: 0px 5px 9px -1px rgba(0,0,0,0.96);
+    /*height: 120px;*/
+    display: flex;
+    justify-content: center;
+}
+
+.Header button {
+    margin: 0 3px 0 3px;
+    background: none;
+    border-radius: 10px;
+    border: #4b4949 solid 2px;
+    color: #4b4949;
+    cursor: pointer;
+    animation: backwards;
+}
+
+.Header button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.HeaderWrap {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.HeaderDark {
+    background: black;
+    color: white;
+    box-shadow: 0 5px 9px -1px rgba(255, 0, 0, 0.96);
+}
+
+.HeaderDark input{
+    background: darkred;
+}
+
+.HeaderDark button:hover{
+    box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

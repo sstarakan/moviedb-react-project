@@ -1,0 +1,13 @@
+.GenreBudge {
+    margin: 4px;
+    background: lightgrey;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 15px;
+    color: darkgray;
+}
+
+.GenreBudgeDark {
+    background: red;
+    color: darkred;
+}

@@ -1,0 +1,9 @@
+.SearchPage {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.dark {
+    background: black;
+}
