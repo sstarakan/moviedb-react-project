@@ -6,11 +6,12 @@ import css from './GenreFilterList.module.css'
 import {movieActions} from "../../redux";
 import {MovieListCard} from "../MovieListCard/MovieListCard";
 import {PaginationComponent} from "../PaginationComponent/PaginationComponent";
+import {GenreBudge} from "../GenreBudge/GenreBudge";
 
 const GenreFilterList = () => {
     const dispatch = useDispatch();
     const {movies, page} = useSelector(state => state.movieReducer);
-    const {movieSearchGenres} = useSelector(state => state.genreReducer);
+    const {movieSearchGenres, genres} = useSelector(state => state.genreReducer);
 
     const {searchGenre, page: navPage} = useParams();
 
@@ -29,6 +30,13 @@ const GenreFilterList = () => {
 
     return (
         <div className={css.Wrap}>
+            {!!movieSearchGenres.length && <div className={css.filterList}>
+                <span>Filter list: </span>
+                {movieSearchGenres.map(id => {
+                    const find = genres.find(genre => genre.id === id);
+                    return <GenreBudge key={find.id} genre={find}/>
+                }) }
+            </div>}
             <div className={css.GenreFilterList}>
                 {movies.map(movie => <MovieListCard key={movie.id} movie={movie}/>)}
             </div>

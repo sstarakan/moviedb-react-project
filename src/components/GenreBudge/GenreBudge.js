@@ -14,7 +14,7 @@ const GenreBudge = ({genre}) => {
     if (movieSearchGenres.length) {
         parameter = movieSearchGenres.toString()
     } else {
-        parameter = genre.id
+        parameter = genre?.id
     }
 
     return (

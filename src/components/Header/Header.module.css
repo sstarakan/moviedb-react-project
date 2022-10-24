@@ -6,28 +6,34 @@
     /*height: 120px;*/
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .Header button {
-    margin: 0 3px 0 3px;
+    margin: 10px;
     background: none;
     border-radius: 10px;
     border: #4b4949 solid 2px;
     color: #4b4949;
     cursor: pointer;
     animation: backwards;
+    width: fit-content;
 }
 
 .Header button:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.genresList{
+    width: 1200px;
+    align-self: center;
+}
 
 .HeaderWrap {
     width: 1200px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-self: center;
 }
 
 .HeaderDark {
@@ -43,3 +49,7 @@
 .HeaderDark button:hover{
     box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+/*.themeButton {*/
+/*    width: 100px;*/
+/*}*/

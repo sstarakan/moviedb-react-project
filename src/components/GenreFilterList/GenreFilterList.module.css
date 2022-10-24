@@ -11,3 +11,7 @@
     flex-direction: column;
     align-items: center;
 }
+
+.filterList {
+    margin: 10px;
+}
