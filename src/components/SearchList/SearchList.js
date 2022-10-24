@@ -6,10 +6,11 @@ import {MovieListCard} from "../MovieListCard/MovieListCard";
 import {PaginationComponent} from "../PaginationComponent/PaginationComponent";
 import {useParams} from "react-router-dom";
 import {movieActions} from "../../redux";
+import {LoadingComponent} from "../LoadingComponent/LoadingComponent";
 
 const SearchList = () => {
     const dispatch = useDispatch();
-    const {searchList, page} = useSelector(state => state.movieReducer);
+    const {searchList, page, loading} = useSelector(state => state.movieReducer);
     const {movieName, page: navPage} = useParams();
 
 
@@ -22,6 +23,7 @@ const SearchList = () => {
 
     return (
         <div className={css.Wrap}>
+            {loading&&<LoadingComponent/>}
             <div className={css.SearchList}>
                 {searchList.map(movie => <MovieListCard key={movie.id} movie={movie}/>)}
             </div>

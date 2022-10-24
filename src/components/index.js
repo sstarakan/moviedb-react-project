@@ -14,3 +14,4 @@ export * from './SearchForm/SearchForm';
 export * from './SearchList/SearchList';
 export * from './GenresContainer/GenresContainer';
 export * from './GenreFilterList/GenreFilterList';
+export * from './LoadingComponent/LoadingComponent';

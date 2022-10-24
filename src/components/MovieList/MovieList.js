@@ -6,10 +6,11 @@ import {movieActions} from "../../redux";
 import {MovieListCard} from "../MovieListCard/MovieListCard";
 import {PaginationComponent} from "../PaginationComponent/PaginationComponent";
 import css from './MovieList.module.css'
+import {LoadingComponent} from "../LoadingComponent/LoadingComponent";
 
 const MovieList = () => {
     const dispatch = useDispatch();
-    const {movies, page} = useSelector(state => state.movieReducer);
+    const {movies, page, loading} = useSelector(state => state.movieReducer);
 
     const {page: navPage} = useParams();
 
@@ -23,6 +24,7 @@ const MovieList = () => {
 
     return (
         <div className={css.Wrap}>
+            {loading&&<LoadingComponent/>}
             <div className={css.MovieList}>
                 {movies.map(movie => <MovieListCard key={movie.id} movie={movie}/>)}
             </div>

@@ -91,20 +91,36 @@ const movieSlice = createSlice({
     },
     extraReducers: builder =>
         builder
+            .addCase(getPage.pending, (state, action)=> {
+                state.loading = true;
+            })
             .addCase(getPage.fulfilled, (state, action) => {
                 state.paginationTrigger = 'movieList'
                 state.movies = action.payload.results
+                state.loading = false
+            })
+            .addCase(getMovie.pending, (state, action)=> {
+                state.loading = true;
             })
             .addCase(getMovie.fulfilled, (state, action) => {
                 state.movie = action.payload
+                state.loading = false
+            })
+            .addCase(searchMovie.pending, (state, action)=> {
+                state.loading = true;
             })
             .addCase(searchMovie.fulfilled, (state, action) => {
                 state.paginationTrigger = 'searchList'
                 state.searchList = action.payload.results;
+                state.loading = false
+            })
+            .addCase(getMovieWithGenres.pending, (state, action)=> {
+                state.loading = true;
             })
             .addCase(getMovieWithGenres.fulfilled, (state, action) => {
                 state.paginationTrigger = 'genreList'
                 state.movies = action.payload.results
+                state.loading = false
             })
 });
 

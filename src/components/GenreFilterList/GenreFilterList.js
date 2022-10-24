@@ -7,10 +7,11 @@ import {movieActions} from "../../redux";
 import {MovieListCard} from "../MovieListCard/MovieListCard";
 import {PaginationComponent} from "../PaginationComponent/PaginationComponent";
 import {GenreBudge} from "../GenreBudge/GenreBudge";
+import {LoadingComponent} from "../LoadingComponent/LoadingComponent";
 
 const GenreFilterList = () => {
     const dispatch = useDispatch();
-    const {movies, page} = useSelector(state => state.movieReducer);
+    const {movies, page, loading} = useSelector(state => state.movieReducer);
     const {movieSearchGenres, genres} = useSelector(state => state.genreReducer);
 
     const {searchGenre, page: navPage} = useParams();
@@ -30,6 +31,7 @@ const GenreFilterList = () => {
 
     return (
         <div className={css.Wrap}>
+            {loading&&<LoadingComponent/>}
             {!!movieSearchGenres.length && <div className={css.filterList}>
                 <span>Filter list: </span>
                 {movieSearchGenres.map(id => {
